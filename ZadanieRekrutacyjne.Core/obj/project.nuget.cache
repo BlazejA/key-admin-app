@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XxPOcCwJsH+jcqnaPSOAwCmRROWw2JA5yuf8Qdzq4SLHzHDDupt2vUMMGZBQ+XtUzAQgv+QU2j/qBYKkMTonfg==",
+  "dgSpecHash": "xZGLOg3OtC88mQKk52+9zAmaymzWyQ0J+psMjBflmaJbDazrQ9nfMw5OPTq0blMw1FV59W+vaKnyX9Lp+HiseQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ablaz\\source\\repos\\ZadanieRekrutacyjne\\ZadanieRekrutacyjne.Core\\ZadanieRekrutacyjne.Core.csproj",
+  "projectFilePath": "C:\\Users\\ablaz\\source\\repos\\ZadanieRekrutacyjne\\zadanie-rekrutacyjne\\ZadanieRekrutacyjne.Core\\ZadanieRekrutacyjne.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ablaz\\.nuget\\packages\\microsoft.data.sqlite.core\\5.0.11\\microsoft.data.sqlite.core.5.0.11.nupkg.sha512",
     "C:\\Users\\ablaz\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\3.1.6\\microsoft.dotnet.platformabstractions.3.1.6.nupkg.sha512",

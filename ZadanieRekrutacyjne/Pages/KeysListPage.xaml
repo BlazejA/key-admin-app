@@ -8,6 +8,9 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="KeysListPage">
 
+    <Page.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+    </Page.Resources>
     <Grid>
         <StackPanel>
         <StackPanel> 
@@ -16,7 +19,7 @@
                     <Label>Numer klucza:</Label>
                     <TextBox Text="{Binding NewKeyID, Mode=TwoWay}"
                              Width="100"
-                             VerticalAlignment="Center" />
+                             VerticalAlignment="Center"/>
                     <Label Margin="20,0,0,0">Nazwa pomieszczenia:</Label>
                     <TextBox Text="{Binding NewRoomName, Mode=TwoWay}"
                              Width="100"
@@ -27,18 +30,45 @@
                             Margin="20,0,0,0"/>
                     
                 </StackPanel>
-                <StackPanel HorizontalAlignment="Right"
-                            Orientation="Horizontal">
+                <DockPanel Margin="5,0,0,0">
+                    <TextBlock Text="Klucz o podanym numerze już istnieje!"
+                               Visibility="{Binding HasErrorOccured, Converter={StaticResource BooleanToVisibilityConverter}}"
+                               HorizontalAlignment="Left"
+                               Foreground="DarkRed"/>
+                    <Button Command="{Binding ToogleVisibilityCommand}"
+                            Content="Edytuj zaznaczone"                            
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Right"/>
                     <Button Command="{Binding DeleteSelectedKeyCommand}"
                             Content="Usuń zaznaczone"
                             VerticalAlignment="Center"
-                            Margin="0,0,10,10"/>
+                            Margin="0,0,10,10"
+                            HorizontalAlignment="Right"/>
+                </DockPanel>
+                <StackPanel Visibility="{Binding DisplayControl, Converter={StaticResource BooleanToVisibilityConverter}}">
+                    <Border BorderThickness="2"
+                    BorderBrush="Gray"
+                    Padding="3"
+                    Margin="0,5,0,5">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Edycja "/>
+                            <TextBlock Text="Numer klucza: "/>
+                            <TextBox Text="{Binding UpdatedKeyID, Mode=TwoWay}"
+                             Width="100"/>
+                            <TextBlock Text="Nazwa pomiesczenia: " Margin="10,0,0,0"/>
+                            <TextBox Text="{Binding UpdatedRoomName, Mode=TwoWay}"
+                             Width="100"/>
+                            <Button Command="{Binding UpdateKeyCommand}"
+                            Content="Akceptuj zmiany"
+                            CommandParameter="{Binding KeyID}"/>
+                        </StackPanel>
+                    </Border>
                 </StackPanel>
             </StackPanel>
         <ItemsControl ItemsSource="{Binding KeysList}">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <local:KeyList/>
+                    <local:KeyList/>                    
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>

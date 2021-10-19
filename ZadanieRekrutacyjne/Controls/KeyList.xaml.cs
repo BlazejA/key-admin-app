@@ -1,4 +1,5 @@
 ﻿using System.Windows.Controls;
+using ZadanieRekrutacyjne.Core;
 
 namespace ZadanieRekrutacyjne
 {
@@ -10,6 +11,7 @@ namespace ZadanieRekrutacyjne
         public KeyList()
         {
             InitializeComponent();
+
         }
     }
 }
