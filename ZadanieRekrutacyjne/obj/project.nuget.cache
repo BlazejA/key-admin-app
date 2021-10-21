@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "VU1U3KYAtHgePhVB6QOg0oXoQ4u/ct8CY0uZxehM2it+vnjVyiQ/RX6Cg9909e+uNoFwYzlTcEfJjfGy7Qt6pQ==",
+  "dgSpecHash": "xN61OwDJv3kD+F8K37juGs5N1fXq3XaqRP7gXWxQwB4tal1o1qBHK/HNka7G3alhxBHav981gMj3amUE+Df46g==",
   "success": true,
   "projectFilePath": "C:\\Users\\ablaz\\source\\repos\\ZadanieRekrutacyjne\\zadanie-rekrutacyjne\\ZadanieRekrutacyjne\\ZadanieRekrutacyjne.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ablaz\\.nuget\\packages\\fody\\6.5.1\\fody.6.5.1.nupkg.sha512",
     "C:\\Users\\ablaz\\.nuget\\packages\\microsoft.data.sqlite.core\\5.0.11\\microsoft.data.sqlite.core.5.0.11.nupkg.sha512",
     "C:\\Users\\ablaz\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\3.1.6\\microsoft.dotnet.platformabstractions.3.1.6.nupkg.sha512",
     "C:\\Users\\ablaz\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.11\\microsoft.entityframeworkcore.5.0.11.nupkg.sha512",
@@ -22,6 +23,7 @@
     "C:\\Users\\ablaz\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\ablaz\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
     "C:\\Users\\ablaz\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\ablaz\\.nuget\\packages\\propertychanged.fody\\3.4.0\\propertychanged.fody.3.4.0.nupkg.sha512",
     "C:\\Users\\ablaz\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.4\\sqlitepclraw.bundle_e_sqlite3.2.0.4.nupkg.sha512",
     "C:\\Users\\ablaz\\.nuget\\packages\\sqlitepclraw.core\\2.0.4\\sqlitepclraw.core.2.0.4.nupkg.sha512",
     "C:\\Users\\ablaz\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.4\\sqlitepclraw.lib.e_sqlite3.2.0.4.nupkg.sha512",

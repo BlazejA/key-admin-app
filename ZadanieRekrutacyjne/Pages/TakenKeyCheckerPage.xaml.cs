@@ -1,18 +1,15 @@
 ﻿using System.Windows.Controls;
-using ZadanieRekrutacyjne.Core;
 
 namespace ZadanieRekrutacyjne
 {
     /// <summary>
     /// Interaction logic for TakenKeyCheckerPage.xaml
     /// </summary>
-    public partial class TakenKeyCheckerPage : Page
+    public partial class TakenKeyCheckerPage : UserControl
     {
         public TakenKeyCheckerPage()
         {
             InitializeComponent();
-
-            DataContext = new TakenKeyCheckerPageViewModel();
         }
     }
 }

@@ -6,6 +6,7 @@ namespace ZadanieRekrutacyjne.Database
     public class ZadanieDbContext : DbContext
     {
         public DbSet<Key> Keys { get; set; }
+        public DbSet<Employee> Employees { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

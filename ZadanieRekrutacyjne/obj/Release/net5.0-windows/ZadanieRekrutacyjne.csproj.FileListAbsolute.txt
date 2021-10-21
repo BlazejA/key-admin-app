@@ -1,0 +1,12 @@
+C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne\obj\Release\net5.0-windows\ZadanieRekrutacyjne.csproj.AssemblyReference.cache
+C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne\obj\Release\net5.0-windows\Styles\Buttons.baml
+C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne\obj\Release\net5.0-windows\Controls\EmployeeList.g.cs
+C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne\obj\Release\net5.0-windows\Controls\KeyList.g.cs
+C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne\obj\Release\net5.0-windows\Controls\TakenKeyChecker.g.cs
+C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne\obj\Release\net5.0-windows\MainWindow.g.cs
+C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne\obj\Release\net5.0-windows\Pages\EmployeesListPage.g.cs
+C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne\obj\Release\net5.0-windows\Pages\TakenKeyCheckerPage.g.cs
+C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne\obj\Release\net5.0-windows\App.g.cs
+C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne\obj\Release\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne\obj\Release\net5.0-windows\ZadanieRekrutacyjne_MarkupCompile.cache
+C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne\obj\Release\net5.0-windows\ZadanieRekrutacyjne_MarkupCompile.lref

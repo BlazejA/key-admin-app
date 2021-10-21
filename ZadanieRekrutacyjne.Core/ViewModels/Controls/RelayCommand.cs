@@ -7,10 +7,10 @@ namespace ZadanieRekrutacyjne.Core
     {
         public event EventHandler CanExecuteChanged;
 
-        private Action<string> mAction;
+        private Action<string> action;
         public RelayCommand(Action<string> action)
         {
-            mAction = action;
+            this.action = action;
         }
 
         public bool CanExecute(object parameter)
@@ -20,7 +20,7 @@ namespace ZadanieRekrutacyjne.Core
 
         public void Execute(object parameter)
         {
-            mAction(parameter as string);
+            action(parameter as string);
         }
     }
 }

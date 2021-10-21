@@ -7,10 +7,16 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Controls\EmployeeList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Controls\KeyList.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Controls\TakenKeyChecker.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\EmployeesListPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Pages\KeysListPage.xaml.cs">
@@ -21,6 +27,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Controls\EmployeeList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Controls\KeyList.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -30,10 +39,16 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Pages\EmployeesListPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Pages\KeysListPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\TakenKeyCheckerPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\Buttons.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

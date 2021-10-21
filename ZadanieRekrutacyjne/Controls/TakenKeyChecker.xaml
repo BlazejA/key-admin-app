@@ -9,5 +9,6 @@
     <StackPanel>
         <TextBlock Text="{Binding ID}"/>
         <TextBlock Text="{Binding EmployeeID}"/>
+        <TextBlock Text="ASDASD"/>
     </StackPanel>
 </UserControl>

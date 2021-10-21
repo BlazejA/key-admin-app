@@ -5,11 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ZadanieRekrutacyjne"
         mc:Ignorable="d"
-        Title="Klucze" Height="450" Width="800"
+        Title="Klucze"
+        Height="450"
+        Width="800"
         MinHeight="400"
         MinWidth="600">
 
+    <Window.Resources>
+        <ResourceDictionary Source="Styles\Buttons.xaml" />
+    </Window.Resources>
 
-    <local:KeysListPage/>
+    <Grid Background="#1ABC9C">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="8*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Background="#16A085"
+                    Grid.Column="0">
+            <Button Content="Wszystkie klucze"
+                    Command="{Binding UpdateViewCommand}"
+                    CommandParameter="AllKeys"
+                    Style="{StaticResource PrimaryStyle}" />
+            <Button Content="Wszyscy pracownicy"
+                    Command="{Binding UpdateViewCommand}"
+                    CommandParameter="AllEmployees"
+                    Style="{StaticResource PrimaryStyle}" />
+            <Button Content="Pobrane klucze"
+                    Command="{Binding UpdateViewCommand}"
+                    CommandParameter="TakenKeys"
+                    Style="{StaticResource PrimaryStyle}" />
+            <Button Content="Odbierz/zdaj klucz"
+                    Command="{Binding UpdateViewCommand}"
+                    CommandParameter="TakeKey"
+                    Style="{StaticResource PrimaryStyle}" />
+        </StackPanel>
+        
+        <ContentControl Content="{Binding SelectedViewModel}"
+                        Grid.Column="1" />
+    </Grid>
 
 </Window>

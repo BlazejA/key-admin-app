@@ -1,77 +1,124 @@
-﻿<Page x:Class="ZadanieRekrutacyjne.KeysListPage"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:ZadanieRekrutacyjne"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="KeysListPage">
+﻿<UserControl x:Class="ZadanieRekrutacyjne.KeysListPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:ZadanieRekrutacyjne"
+             mc:Ignorable="d"
+             d:DesignHeight="450"
+             d:DesignWidth="800">
 
-    <Page.Resources>
-        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
-    </Page.Resources>
-    <Grid>
-        <StackPanel>
-        <StackPanel> 
-                <TextBlock Text="Dodaj nowy klucz" Margin="5,0,0,0"></TextBlock>
-                <StackPanel Orientation="Horizontal">
-                    <Label>Numer klucza:</Label>
-                    <TextBox Text="{Binding NewKeyID, Mode=TwoWay}"
-                             Width="100"
-                             VerticalAlignment="Center"/>
-                    <Label Margin="20,0,0,0">Nazwa pomieszczenia:</Label>
-                    <TextBox Text="{Binding NewRoomName, Mode=TwoWay}"
-                             Width="100"
-                             VerticalAlignment="Center" />
-                    <Button Command="{Binding AddNewKeyCommand}"
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+
+        <Style x:Key="NavButtons"
+               TargetType="{x:Type Button}">
+            <Setter Property="Width"
+                    Value="100" />
+            <Setter Property="Height"
+                    Value="30" />
+            <Setter Property="BorderBrush"
+                    Value="#1ABC9C" />
+            <Setter Property="Background"
+                    Value="#16A085" />
+            <Setter Property="FontFamily"
+                    Value="Open Sans" />
+        </Style>
+        <Style x:Key="ApproveButton"
+               TargetType="{x:Type Button}">
+            <Setter Property="Width"
+                    Value="130" />
+            <Setter Property="Height"
+                    Value="30" />
+            <Setter Property="BorderBrush"
+                    Value="#16A085" />
+            <Setter Property="Background"
+                    Value="#1ABC9C" />
+            <Setter Property="FontFamily"
+                    Value="Open Sans" />
+
+        </Style>
+    </UserControl.Resources>
+
+    <StackPanel>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0"
+                        Background="#16A085">
+                <TextBlock Text="Klucze"
+                           HorizontalAlignment="Center"
+                           FontFamily="Open Sans"
+                           FontSize="24" />
+                <StackPanel HorizontalAlignment="Center"
+                            Orientation="Horizontal">
+                    <Button Command="{Binding ToogleAddVisibilityCommand}"
                             Content="Dodaj"
-                            VerticalAlignment="Center"
-                            Margin="20,0,0,0"/>
-                    
-                </StackPanel>
-                <DockPanel Margin="5,0,0,0">
-                    <TextBlock Text="Klucz o podanym numerze już istnieje!"
-                               Visibility="{Binding HasErrorOccured, Converter={StaticResource BooleanToVisibilityConverter}}"
-                               HorizontalAlignment="Left"
-                               Foreground="DarkRed"/>
-                    <Button Command="{Binding ToogleVisibilityCommand}"
-                            Content="Edytuj zaznaczone"                            
-                            VerticalAlignment="Center"
-                            HorizontalAlignment="Right"/>
+                            Margin="10,0,15,10"
+                            Style="{StaticResource NavButtons}" />
+                    <Button Command="{Binding ToogleEditVisibilityCommand}"
+                            Content="Edytuj"
+                            Margin="15,0,15,10"
+                            Style="{StaticResource NavButtons}" />
                     <Button Command="{Binding DeleteSelectedKeyCommand}"
                             Content="Usuń zaznaczone"
-                            VerticalAlignment="Center"
-                            Margin="0,0,10,10"
-                            HorizontalAlignment="Right"/>
-                </DockPanel>
-                <StackPanel Visibility="{Binding DisplayControl, Converter={StaticResource BooleanToVisibilityConverter}}">
-                    <Border BorderThickness="2"
-                    BorderBrush="Gray"
-                    Padding="3"
-                    Margin="0,5,0,5">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Edycja "/>
-                            <TextBlock Text="Numer klucza: "/>
-                            <TextBox Text="{Binding UpdatedKeyID, Mode=TwoWay}"
-                             Width="100"/>
-                            <TextBlock Text="Nazwa pomiesczenia: " Margin="10,0,0,0"/>
-                            <TextBox Text="{Binding UpdatedRoomName, Mode=TwoWay}"
-                             Width="100"/>
-                            <Button Command="{Binding UpdateKeyCommand}"
-                            Content="Akceptuj zmiany"
-                            CommandParameter="{Binding KeyID}"/>
-                        </StackPanel>
-                    </Border>
+                            Margin="15,0,10,10"
+                            Style="{StaticResource NavButtons}" />
                 </StackPanel>
             </StackPanel>
-        <ItemsControl ItemsSource="{Binding KeysList}">
-            <ItemsControl.ItemTemplate>
-                <DataTemplate>
-                    <local:KeyList/>                    
-                </DataTemplate>
-            </ItemsControl.ItemTemplate>
-        </ItemsControl>
-        </StackPanel>
-    </Grid>
-</Page>
+            <StackPanel Grid.Row="1">
+                <TextBlock Text="Klucz o podanym numerze już istnieje!"
+                           Visibility="{Binding HasErrorOccured, Converter={StaticResource BooleanToVisibilityConverter}}"
+                           HorizontalAlignment="Center"
+                           Foreground="DarkRed"
+                           FontSize="16"/>
+            </StackPanel>
+            <StackPanel Visibility="{Binding EditDisplayControl, Converter={StaticResource BooleanToVisibilityConverter}}"
+                        Grid.Row="2"
+                        Orientation="Horizontal">
+                <Label VerticalAlignment="Center">Numer klucza:</Label>
+                <TextBox Text="{Binding UpdatedKeyID, Mode=TwoWay}"
+                         Width="100"
+                         VerticalAlignment="Center" />
+                <Label Margin="20,0,0,0"
+                       VerticalAlignment="Center">Nazwa pomieszczenia:</Label>
+                <TextBox Text="{Binding UpdatedRoomName, Mode=TwoWay}"
+                         Width="100"
+                         VerticalAlignment="Center" />
+                <Button Command="{Binding UpdateKeyCommand}"
+                        Content="Edytuj zaznaczone"
+                        CommandParameter="{Binding KeyID}"
+                        Margin="20,5,0,5"
+                        Style="{StaticResource ApproveButton}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"
+                        Visibility="{Binding AddDisplayControl, Converter={StaticResource BooleanToVisibilityConverter}}"
+                        Grid.Row="3">
+                <Label VerticalAlignment="Center">Numer klucza:</Label>
+                <TextBox Text="{Binding NewKeyID, Mode=TwoWay}"
+                         Width="100"
+                         VerticalAlignment="Center" />
+                <Label Margin="20,0,0,0"
+                       VerticalAlignment="Center">Nazwa pomieszczenia:</Label>
+                <TextBox Text="{Binding NewRoomName, Mode=TwoWay}"
+                         Width="100"
+                         VerticalAlignment="Center" />
+                <Button Command="{Binding AddNewKeyCommand}"
+                        Content="Dodaj"
+                        VerticalAlignment="Center"
+                        Margin="20,5,0,5"
+                        Style="{StaticResource ApproveButton}" />
+            </StackPanel>
+
+        </Grid>
+
+        <local:KeyList />
+    </StackPanel>
+
+
+</UserControl>

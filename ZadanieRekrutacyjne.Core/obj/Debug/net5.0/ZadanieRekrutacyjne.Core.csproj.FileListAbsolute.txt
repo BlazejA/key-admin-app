@@ -23,6 +23,7 @@ C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekr
 C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne.Core\obj\Debug\net5.0\ZadanieRekrutacyjne.Core.AssemblyInfoInputs.cache
 C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne.Core\obj\Debug\net5.0\ZadanieRekrutacyjne.Core.AssemblyInfo.cs
 C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne.Core\obj\Debug\net5.0\ZadanieRekrutacyjne.Core.csproj.CoreCompileInputs.cache
+C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne.Core\obj\Debug\net5.0\ZadanieRekrutacyjne.Core.csproj.Fody.CopyLocal.cache
 C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne.Core\obj\Debug\net5.0\ZadanieRekrutacyjne.Core.dll
 C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne.Core\obj\Debug\net5.0\ref\ZadanieRekrutacyjne.Core.dll
 C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne.Core\obj\Debug\net5.0\ZadanieRekrutacyjne.Core.pdb
