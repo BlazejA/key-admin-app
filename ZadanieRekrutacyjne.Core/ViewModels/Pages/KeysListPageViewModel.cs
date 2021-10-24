@@ -8,7 +8,7 @@ namespace ZadanieRekrutacyjne.Core
     public class KeysListPageViewModel : BaseViewModel
     {
         public ObservableCollection<KeysViewModel> KeysList { get; set; } = new ObservableCollection<KeysViewModel>();
-        public string NewKeyID { get; set; }
+        public string NewKeyNumber { get; set; }
         public string NewRoomName { get; set; }
         public ICommand AddNewKeyCommand { get; set; }
         public ICommand DeleteSelectedKeyCommand { get; set; }
@@ -18,7 +18,7 @@ namespace ZadanieRekrutacyjne.Core
         public bool HasErrorOccured { get; set; } = false;
         public bool EditDisplayControl { get; set; } = false;
         public bool AddDisplayControl { get; set; } = false;
-        public string UpdatedKeyID { get; set; }
+        public string UpdatedKeyNumber { get; set; }
         public string UpdatedRoomName { get; set; }
 
         public KeysListPageViewModel()
@@ -36,7 +36,7 @@ namespace ZadanieRekrutacyjne.Core
         }
         private void AddNewKey(object o)
         {
-            var newKey = new KeysViewModel { KeyNumber = NewKeyID, RoomName = NewRoomName };
+            var newKey = new KeysViewModel { KeyNumber = NewKeyNumber, RoomName = NewRoomName };
 
             if (!KeyNumberExist(newKey.KeyNumber))
             {
@@ -45,10 +45,10 @@ namespace ZadanieRekrutacyjne.Core
                 DatabaseLocator.Database.SaveChanges();
             }
 
-            NewKeyID = string.Empty;
+            NewKeyNumber = string.Empty;
             NewRoomName = string.Empty;
 
-            OnPropertyChanged(nameof(NewKeyID));
+            OnPropertyChanged(nameof(NewKeyNumber));
             OnPropertyChanged(nameof(NewRoomName));
         }
         private void DeleteSelectedKey(object o)
@@ -83,12 +83,12 @@ namespace ZadanieRekrutacyjne.Core
             foreach (var key in selectedKeys)
             {
                 var keyToUpdate = DatabaseLocator.Database.Keys.FirstOrDefault(x => x.KeyNumber == key.KeyNumber);
-                if (keyToUpdate != null && !KeyNumberExist(UpdatedKeyID))
+                if (keyToUpdate != null && !KeyNumberExist(UpdatedKeyNumber))
                 {
-                    if (!string.IsNullOrEmpty(UpdatedKeyID))
+                    if (!string.IsNullOrEmpty(UpdatedKeyNumber))
                     {
-                        keyToUpdate.KeyNumber = UpdatedKeyID;
-                        var newItem = new KeysViewModel { KeyNumber = UpdatedKeyID, RoomName = key.RoomName };
+                        keyToUpdate.KeyNumber = UpdatedKeyNumber;
+                        var newItem = new KeysViewModel { KeyNumber = UpdatedKeyNumber, RoomName = key.RoomName };
                         ReplaceItem(KeysList, key.KeyNumber, newItem);
                     }
                     else if (!string.IsNullOrEmpty(UpdatedRoomName))
@@ -97,21 +97,21 @@ namespace ZadanieRekrutacyjne.Core
                         var newItem = new KeysViewModel { KeyNumber = key.KeyNumber, RoomName = UpdatedRoomName };
                         ReplaceItem(KeysList, key.KeyNumber, newItem);
                     }
-                    else if (!string.IsNullOrEmpty(UpdatedKeyID) && !string.IsNullOrEmpty(UpdatedRoomName))
+                    else if (!string.IsNullOrEmpty(UpdatedKeyNumber) && !string.IsNullOrEmpty(UpdatedRoomName))
                     {
-                        keyToUpdate.KeyNumber = UpdatedKeyID;
+                        keyToUpdate.KeyNumber = UpdatedKeyNumber;
 
                         keyToUpdate.RoomName = UpdatedRoomName;
-                        var newItem = new KeysViewModel { KeyNumber = UpdatedKeyID, RoomName = UpdatedRoomName };
+                        var newItem = new KeysViewModel { KeyNumber = UpdatedKeyNumber, RoomName = UpdatedRoomName };
                         ReplaceItem(KeysList, key.KeyNumber, newItem);
                     }
                 }
             }
 
-            UpdatedKeyID = string.Empty;
+            UpdatedKeyNumber = string.Empty;
             UpdatedRoomName = string.Empty;
 
-            OnPropertyChanged(nameof(UpdatedKeyID));
+            OnPropertyChanged(nameof(UpdatedKeyNumber));
             OnPropertyChanged(nameof(UpdatedRoomName));
 
             DatabaseLocator.Database.SaveChanges();

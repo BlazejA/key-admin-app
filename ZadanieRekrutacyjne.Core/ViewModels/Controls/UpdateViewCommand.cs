@@ -34,7 +34,7 @@ namespace ZadanieRekrutacyjne.Core
             }
             else if (parameter.ToString() == "TakeKey")
             {
-
+                viewModel.SelectedViewModel = new TakeReturnKeyPageViewModel();
             }
         }
     }

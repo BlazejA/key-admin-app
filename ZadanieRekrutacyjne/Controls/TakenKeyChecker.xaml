@@ -6,9 +6,32 @@
              xmlns:local="clr-namespace:ZadanieRekrutacyjne"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <StackPanel>
-        <TextBlock Text="{Binding ID}"/>
-        <TextBlock Text="{Binding EmployeeID}"/>
-        <TextBlock Text="ASDASD"/>
-    </StackPanel>
+
+    <Grid>
+        <DataGrid ItemsSource="{Binding TakenKey}"
+                  AutoGenerateColumns="False"
+                  GridLinesVisibility="None"
+                  MaxHeight="300"
+                  VerticalScrollBarVisibility="Auto">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Numer klucza"
+                                    Binding="{Binding KeyNumber}"
+                                    Width="100"
+                                    IsReadOnly="True" />
+                <DataGridTextColumn Header="Numer pracownika"
+                                    Binding="{Binding EmployeeNumber}"
+                                    Width="120"
+                                    IsReadOnly="True" />
+                <DataGridTextColumn Header="Imię"
+                                    Binding="{Binding EmployeeName}"
+                                    Width="200"
+                                    IsReadOnly="True" />
+                <DataGridTextColumn Header="Nazwisko"
+                                    Binding="{Binding EmployeeLastName}"
+                                    Width="200"
+                                    IsReadOnly="True" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+
 </UserControl>

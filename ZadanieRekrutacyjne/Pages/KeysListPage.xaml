@@ -82,7 +82,7 @@
                         Grid.Row="2"
                         Orientation="Horizontal">
                 <Label VerticalAlignment="Center">Numer klucza:</Label>
-                <TextBox Text="{Binding UpdatedKeyID, Mode=TwoWay}"
+                <TextBox Text="{Binding UpdatedKeyNumber, Mode=TwoWay}"
                          Width="100"
                          VerticalAlignment="Center" />
                 <Label Margin="20,0,0,0"
@@ -100,7 +100,7 @@
                         Visibility="{Binding AddDisplayControl, Converter={StaticResource BooleanToVisibilityConverter}}"
                         Grid.Row="3">
                 <Label VerticalAlignment="Center">Numer klucza:</Label>
-                <TextBox Text="{Binding NewKeyID, Mode=TwoWay}"
+                <TextBox Text="{Binding NewKeyNumber, Mode=TwoWay}"
                          Width="100"
                          VerticalAlignment="Center" />
                 <Label Margin="20,0,0,0"

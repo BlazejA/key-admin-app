@@ -1,4 +1,6 @@
-﻿namespace ZadanieRekrutacyjne
+﻿using System.Collections.Generic;
+
+namespace ZadanieRekrutacyjne
 {
     public class Employee
     {
@@ -8,5 +10,6 @@
         public string LastName { get; set; }
         public string Position { get; set; }
         public string Department { get; set; }
+        public IList<EmployeeKey> EmployeeKeys { get; set; } = new List<EmployeeKey>();
     }
 }

@@ -14,5 +14,8 @@
         <DataTemplate DataType="{x:Type viewmodels:EmployeesListPageViewModel}">
             <local:EmployeesListPage />
         </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:TakeReturnKeyPageViewModel}">
+            <local:TakeReturnKeyPage />
+        </DataTemplate>
     </Application.Resources>
 </Application>

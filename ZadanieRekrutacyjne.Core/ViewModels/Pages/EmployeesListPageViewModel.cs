@@ -113,7 +113,6 @@ namespace ZadanieRekrutacyjne.Core
         }
         private void UpdateEmployee(string id)
         {
-            Debug.WriteLine("BLAD");
             var selectedEmployees = EmployeesList.Where(x => x.IsSelected).ToList();
             foreach (var empl in selectedEmployees)
             {

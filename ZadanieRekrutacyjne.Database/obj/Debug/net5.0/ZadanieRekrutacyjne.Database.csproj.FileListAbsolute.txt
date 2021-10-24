@@ -11,10 +11,11 @@ C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\ZadanieRekrutacyjne.Database\obj
 C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\ZadanieRekrutacyjne.Database\obj\Debug\net5.0\ref\ZadanieRekrutacyjne.Database.dll
 C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\ZadanieRekrutacyjne.Database\obj\Debug\net5.0\ZadanieRekrutacyjne.Database.pdb
 C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne.Database\bin\Debug\net5.0\ZadanieRekrutacyjne.Database.deps.json
+C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne.Database\bin\Debug\net5.0\ZadanieRekrutacyjne.Database.runtimeconfig.json
+C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne.Database\bin\Debug\net5.0\ZadanieRekrutacyjne.Database.runtimeconfig.dev.json
 C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne.Database\bin\Debug\net5.0\ZadanieRekrutacyjne.Database.dll
 C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne.Database\bin\Debug\net5.0\ref\ZadanieRekrutacyjne.Database.dll
 C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne.Database\bin\Debug\net5.0\ZadanieRekrutacyjne.Database.pdb
-C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne.Database\obj\Debug\net5.0\ZadanieRekrutacyjne.Database.csproj.AssemblyReference.cache
 C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne.Database\obj\Debug\net5.0\ZadanieRekrutacyjne.Database.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne.Database\obj\Debug\net5.0\ZadanieRekrutacyjne.Database.AssemblyInfoInputs.cache
 C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne.Database\obj\Debug\net5.0\ZadanieRekrutacyjne.Database.AssemblyInfo.cs
@@ -22,3 +23,4 @@ C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekr
 C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne.Database\obj\Debug\net5.0\ZadanieRekrutacyjne.Database.dll
 C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne.Database\obj\Debug\net5.0\ref\ZadanieRekrutacyjne.Database.dll
 C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne.Database\obj\Debug\net5.0\ZadanieRekrutacyjne.Database.pdb
+C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne.Database\obj\Debug\net5.0\ZadanieRekrutacyjne.Database.genruntimeconfig.cache

@@ -22,11 +22,11 @@
         </Grid.ColumnDefinitions>
         <StackPanel Background="#16A085"
                     Grid.Column="0">
-            <Button Content="Wszystkie klucze"
+            <Button Content="Lista kluczy"
                     Command="{Binding UpdateViewCommand}"
                     CommandParameter="AllKeys"
                     Style="{StaticResource PrimaryStyle}" />
-            <Button Content="Wszyscy pracownicy"
+            <Button Content="Lista pracowników"
                     Command="{Binding UpdateViewCommand}"
                     CommandParameter="AllEmployees"
                     Style="{StaticResource PrimaryStyle}" />
@@ -39,7 +39,7 @@
                     CommandParameter="TakeKey"
                     Style="{StaticResource PrimaryStyle}" />
         </StackPanel>
-        
+
         <ContentControl Content="{Binding SelectedViewModel}"
                         Grid.Column="1" />
     </Grid>

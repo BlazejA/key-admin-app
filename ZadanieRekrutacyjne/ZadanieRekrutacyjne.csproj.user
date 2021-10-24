@@ -25,6 +25,9 @@
     <Compile Update="Pages\TakenKeyCheckerPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Pages\TakeReturnKeyPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Controls\EmployeeList.xaml">
@@ -46,6 +49,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\TakenKeyCheckerPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\TakeReturnKeyPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Styles\Buttons.xaml">
