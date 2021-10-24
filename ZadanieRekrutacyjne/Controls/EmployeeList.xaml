@@ -13,14 +13,17 @@
         <Grid>
             <DataGrid ItemsSource="{Binding EmployeesList}"
                       AutoGenerateColumns="False"
-                      GridLinesVisibility="None">
+                      GridLinesVisibility="None"
+                      CanUserAddRows="false"
+                      MaxHeight="350"
+                      VerticalScrollBarVisibility="Auto">
                 <DataGrid.Columns>
                     <DataGridCheckBoxColumn Header=""
                                             Binding="{Binding IsSelected}"
                                             Width="30" />
                     <DataGridTextColumn Header="Numer pracownika"
                                         Binding="{Binding EmployeeNumber}"
-                                        Width="100"
+                                        Width="120"
                                         IsReadOnly="True" />
                     <DataGridTextColumn Header="Imię"
                                         Binding="{Binding Name}"

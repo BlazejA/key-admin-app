@@ -26,6 +26,7 @@ namespace ZadanieRekrutacyjne.Core
         public string UpdatedLastName { get; set; }
         public string UpdatedPosition { get; set; }
         public string UpdatedDepartment { get; set; }
+        public string ErrorMessage { get; set; }
 
         public EmployeesListPageViewModel()
         {
@@ -58,7 +59,7 @@ namespace ZadanieRekrutacyjne.Core
                 Department = NewDepartment
             };
 
-            if (!EmployeeNumberExist(newEmployee.EmployeeNumber))
+            if (!EmployeeNumberExist(newEmployee.EmployeeNumber) && IsLongEnought(NewEmployeeNumber))
             {
                 DatabaseLocator.Database.Employees.Add(new Employee
                 {
@@ -77,12 +78,6 @@ namespace ZadanieRekrutacyjne.Core
             NewLastName = string.Empty;
             NewName = string.Empty;
             NewDepartment = string.Empty;
-
-            OnPropertyChanged(nameof(NewEmployeeNumber));
-            OnPropertyChanged(nameof(NewName));
-            OnPropertyChanged(nameof(NewLastName));
-            OnPropertyChanged(nameof(NewName));
-            OnPropertyChanged(nameof(NewName));
 
         }
         private void DeleteSelectedEmployee(object o)
@@ -104,12 +99,12 @@ namespace ZadanieRekrutacyjne.Core
         private void ToogleEditVisibility(object o)
         {
             EditDisplayControl = !EditDisplayControl;
-            OnPropertyChanged(nameof(EditDisplayControl));
+            AddDisplayControl = false;
         }
         private void ToogleAddVisibility(object o)
         {
             AddDisplayControl = !AddDisplayControl;
-            OnPropertyChanged(nameof(AddDisplayControl));
+            EditDisplayControl = false;
         }
         private void UpdateEmployee(string id)
         {
@@ -117,7 +112,7 @@ namespace ZadanieRekrutacyjne.Core
             foreach (var empl in selectedEmployees)
             {
                 var employeeToUpdate = DatabaseLocator.Database.Employees.FirstOrDefault(x => x.EmployeeNumber == empl.EmployeeNumber);
-                if (employeeToUpdate != null && !EmployeeNumberExist(UpdatedEmployeeNumber))
+                if (employeeToUpdate != null && !EmployeeNumberExist(UpdatedEmployeeNumber) && IsLongEnought(NewEmployeeNumber))
                 {
                     if (string.IsNullOrEmpty(UpdatedEmployeeNumber))
                     {
@@ -175,21 +170,33 @@ namespace ZadanieRekrutacyjne.Core
             if (DatabaseLocator.Database.Employees.Any(x => x.EmployeeNumber == keyToCheck))
             {
                 HasErrorOccured = true;
-                OnPropertyChanged(nameof(HasErrorOccured));
+                ErrorMessage = "Pracownik o podanym numerze już istnieje!";
                 return true;
             }
             else
             {
                 HasErrorOccured = false;
-                OnPropertyChanged(nameof(HasErrorOccured));
+                return false;
             }
-            return false;
         }
         private void ReplaceItem(ObservableCollection<EmployeesViewModel> list, string toChange, EmployeesViewModel newItem)
         {
             var oldItem = list.FirstOrDefault(x => x.EmployeeNumber == toChange);
             var oldIndex = list.IndexOf(oldItem);
             list[oldIndex] = newItem;
+        }
+        private bool IsLongEnought(string check)
+        {
+            if (check.Length == 4)
+            {
+                return true;
+            }
+            else
+            {
+                ErrorMessage = "Numer musi składać się z 4 cyfr!";
+                HasErrorOccured = true;
+                return false;
+            }
         }
     }
 

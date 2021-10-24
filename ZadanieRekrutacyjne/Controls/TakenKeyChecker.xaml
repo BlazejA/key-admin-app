@@ -11,8 +11,9 @@
         <DataGrid ItemsSource="{Binding TakenKey}"
                   AutoGenerateColumns="False"
                   GridLinesVisibility="None"
-                  MaxHeight="300"
-                  VerticalScrollBarVisibility="Auto">
+                  MaxHeight="350"
+                  VerticalScrollBarVisibility="Auto"
+                  CanUserAddRows="false">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Numer klucza"
                                     Binding="{Binding KeyNumber}"
@@ -20,7 +21,7 @@
                                     IsReadOnly="True" />
                 <DataGridTextColumn Header="Numer pracownika"
                                     Binding="{Binding EmployeeNumber}"
-                                    Width="120"
+                                    Width="140"
                                     IsReadOnly="True" />
                 <DataGridTextColumn Header="Imię"
                                     Binding="{Binding EmployeeName}"

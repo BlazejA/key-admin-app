@@ -70,7 +70,7 @@
                         Content="Wydaj klucz"
                         Style="{StaticResource ApproveButton}" />
                 <Button Command="{Binding ReturnKeyCommand}"
-                        Content="Zwróc klucz"
+                        Content="Zwróć klucz"
                         Style="{StaticResource ApproveButton}" />
             </StackPanel>
 
@@ -83,7 +83,7 @@
             <TextBlock Text="{Binding SucceedMessage}"
                        Visibility="{Binding SucceedOccured, Converter={StaticResource BooleanToVisibilityConverter}}"
                        HorizontalAlignment="Center"
-                       Foreground="ForestGreen"
+                       Foreground="#013220"
                        FontSize="16"
                        Margin="0,20,0,0" />
         </StackPanel>

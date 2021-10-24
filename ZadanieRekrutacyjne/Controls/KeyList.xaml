@@ -13,15 +13,16 @@
             <DataGrid ItemsSource="{Binding KeysList}"
                       AutoGenerateColumns="False"
                       GridLinesVisibility="None"
-                      MaxHeight="300"
-                      VerticalScrollBarVisibility="Auto">
+                      MaxHeight="350"
+                      VerticalScrollBarVisibility="Auto"
+                      CanUserAddRows="false">
                 <DataGrid.Columns>
                     <DataGridCheckBoxColumn Header=""
                                             Binding="{Binding IsSelected}"
                                             Width="30" />
                     <DataGridTextColumn Header="Numer Klucza"
                                         Binding="{Binding KeyNumber}"
-                                        Width="150"
+                                        Width="120"
                                         IsReadOnly="True" />
                     <DataGridTextColumn Header="Pomieszczenie"
                                         Binding="{Binding RoomName}"

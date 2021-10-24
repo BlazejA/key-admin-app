@@ -20,6 +20,7 @@ namespace ZadanieRekrutacyjne.Core
         public bool AddDisplayControl { get; set; } = false;
         public string UpdatedKeyNumber { get; set; }
         public string UpdatedRoomName { get; set; }
+        public string ErrorMessage { get; set; }
 
         public KeysListPageViewModel()
         {
@@ -38,15 +39,15 @@ namespace ZadanieRekrutacyjne.Core
         {
             var newKey = new KeysViewModel { KeyNumber = NewKeyNumber, RoomName = NewRoomName };
 
-            if (!KeyNumberExist(newKey.KeyNumber))
+            if (!KeyNumberExist(newKey.KeyNumber) && IsLongEnought(NewKeyNumber))
             {
                 DatabaseLocator.Database.Keys.Add(new Key { KeyNumber = newKey.KeyNumber, RoomName = newKey.RoomName });
                 KeysList.Add(newKey);
                 DatabaseLocator.Database.SaveChanges();
-            }
 
-            NewKeyNumber = string.Empty;
-            NewRoomName = string.Empty;
+                NewKeyNumber = string.Empty;
+                NewRoomName = string.Empty;
+            }
         }
         private void DeleteSelectedKey(object o)
         {
@@ -67,10 +68,12 @@ namespace ZadanieRekrutacyjne.Core
         private void ToogleEditVisibility(object o)
         {
             EditDisplayControl = !EditDisplayControl;
+            AddDisplayControl = false;
         }
         private void ToogleAddVisibility(object o)
         {
             AddDisplayControl = !AddDisplayControl;
+            EditDisplayControl = false;
         }
         private void UpdateKey(string id)
         {
@@ -78,7 +81,7 @@ namespace ZadanieRekrutacyjne.Core
             foreach (var key in selectedKeys)
             {
                 var keyToUpdate = DatabaseLocator.Database.Keys.FirstOrDefault(x => x.KeyNumber == key.KeyNumber);
-                if (keyToUpdate != null && !KeyNumberExist(UpdatedKeyNumber))
+                if (keyToUpdate != null && !KeyNumberExist(UpdatedKeyNumber) && IsLongEnought(UpdatedKeyNumber))
                 {
                     if (!string.IsNullOrEmpty(UpdatedKeyNumber))
                     {
@@ -112,6 +115,7 @@ namespace ZadanieRekrutacyjne.Core
         {
             if (DatabaseLocator.Database.Keys.Any(x => x.KeyNumber == keyToCheck))
             {
+                ErrorMessage = "Klucz o podanym numerze już istnieje!";
                 HasErrorOccured = true;
                 return true;
             }
@@ -126,6 +130,19 @@ namespace ZadanieRekrutacyjne.Core
             var oldItem = list.FirstOrDefault(x => x.KeyNumber == toChange);
             var oldIndex = list.IndexOf(oldItem);
             list[oldIndex] = newItem;
+        }
+        private bool IsLongEnought(string check)
+        {
+            if (check.Length == 4)
+            {
+                return true;
+            }
+            else
+            {
+                ErrorMessage = "Numer musi składać się z 4 cyfr!";
+                HasErrorOccured = true;
+                return false;
+            }
         }
     }
 }

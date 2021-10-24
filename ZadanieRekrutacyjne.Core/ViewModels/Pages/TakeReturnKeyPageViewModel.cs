@@ -26,23 +26,27 @@ namespace ZadanieRekrutacyjne.Core
 
         private void TakeNewKey(object obj)
         {
-            if (IsOnlyEmployee())
+            if (IsAllFieldsFill())
             {
-                var takenEmployee = DatabaseLocator.Database.Employees.FirstOrDefault(x => x.Name == TakenEmployeeName && x.LastName == TakenEmployeeLastName && x.EmployeeNumber == TakenEmployeeNumber);
-                if (!isNull(takenEmployee))
+                if (IsOnlyEmployee())
                 {
-                    if (!IsKeyTaken() && IsKeyExist(TakenKeyId))
+                    var takenEmployee = DatabaseLocator.Database.Employees.FirstOrDefault(x => x.Name == TakenEmployeeName && x.LastName == TakenEmployeeLastName && x.EmployeeNumber == TakenEmployeeNumber);
+                    if (!isNull(takenEmployee))
                     {
-                        var takenKey = DatabaseLocator.Database.Keys.FirstOrDefault(x => x.KeyNumber == TakenKeyId);
-                        DatabaseLocator.Database.EmployeeKeys.Add(new EmployeeKey { KeyId = takenKey.Id, EmployeeId = takenEmployee.Id });
-                        DatabaseLocator.Database.SaveChanges();
-                        SucceedMessage = "Wydano klucz!";
-                        SucceedOccured = true;
-                        TakenKeyId = string.Empty;
-                        TakenEmployeeNumber = string.Empty;
-                        TakenEmployeeName = string.Empty;
-                        TakenEmployeeLastName = string.Empty;
+                        if (!IsKeyTaken() && IsKeyExist(TakenKeyId))
+                        {
+                            var takenKey = DatabaseLocator.Database.Keys.FirstOrDefault(x => x.KeyNumber == TakenKeyId);
+                            DatabaseLocator.Database.EmployeeKeys.Add(new EmployeeKey { KeyId = takenKey.Id, EmployeeId = takenEmployee.Id });
+                            DatabaseLocator.Database.SaveChanges();
+                            HasErrorOccured = false;
+                            SucceedMessage = "Wydano klucz!";
+                            SucceedOccured = true;
+                            TakenKeyId = string.Empty;
+                            TakenEmployeeNumber = string.Empty;
+                            TakenEmployeeName = string.Empty;
+                            TakenEmployeeLastName = string.Empty;
 
+                        }
                     }
                 }
             }
@@ -57,9 +61,9 @@ namespace ZadanieRekrutacyjne.Core
                 {
                     DatabaseLocator.Database.EmployeeKeys.Remove(emplToRemove);
                     DatabaseLocator.Database.SaveChanges();
+                    HasErrorOccured = false;
                     SucceedMessage = "Zwrócono klucz!";
                     SucceedOccured = true;
-
                     TakenKeyId = string.Empty;
                     TakenEmployeeNumber = string.Empty;
                     TakenEmployeeLastName = string.Empty;
@@ -80,10 +84,6 @@ namespace ZadanieRekrutacyjne.Core
             {
                 found.Where(x => x.EmployeeNumber == TakenEmployeeNumber);
                 return true;
-            }
-            else if (IsAllFieldsFill())
-            {
-                return false;
             }
             else if (found.Count == 0)
             {
@@ -108,7 +108,11 @@ namespace ZadanieRekrutacyjne.Core
                 ErrorMessage = "Wpisz wszystkie dane!";
                 return false;
             }
-            return true;
+            else
+            {
+                return true;
+            }
+            return false;
         }
 
         private bool isNull(object found)
@@ -155,7 +159,7 @@ namespace ZadanieRekrutacyjne.Core
                     else
                     {
                         HasErrorOccured = true;
-                        ErrorMessage = "Niepoprawny numer klucza lub dane pracownika!";
+                        ErrorMessage = "Niepoprawny numer klucza lub dane pracownika zdającego klucz!";
                         return false;
                     }
                 }
@@ -189,7 +193,7 @@ namespace ZadanieRekrutacyjne.Core
             if (takenAllKeys)
             {
                 HasErrorOccured = true;
-                ErrorMessage = "Klucz został pobrany!";
+                ErrorMessage = "Klucz posiada inny pracownik!";
                 return true;
             }
             else
@@ -197,5 +201,6 @@ namespace ZadanieRekrutacyjne.Core
                 return false;
             }
         }
+
     }
 }

@@ -72,7 +72,7 @@
                 </StackPanel>
             </StackPanel>
             <StackPanel Grid.Row="1">
-                <TextBlock Text="Klucz o podanym numerze już istnieje!"
+                <TextBlock Text="{Binding ErrorMessage}"
                            Visibility="{Binding HasErrorOccured, Converter={StaticResource BooleanToVisibilityConverter}}"
                            HorizontalAlignment="Center"
                            Foreground="DarkRed"

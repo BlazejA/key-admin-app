@@ -10,7 +10,9 @@ C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekr
 C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne.Core\obj\Release\net5.0\ZadanieRekrutacyjne.Core.AssemblyInfo.cs
 C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne.Core\obj\Release\net5.0\ZadanieRekrutacyjne.Core.csproj.CoreCompileInputs.cache
 C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne.Core\obj\Release\net5.0\ZadanieRekrutacyjne.Core.csproj.Fody.CopyLocal.cache
-C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne.Core\obj\Release\net5.0\ZadanieRekrutacyjne.Core.csproj.CopyComplete
 C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne.Core\obj\Release\net5.0\ZadanieRekrutacyjne.Core.dll
 C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne.Core\obj\Release\net5.0\ref\ZadanieRekrutacyjne.Core.dll
 C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne.Core\obj\Release\net5.0\ZadanieRekrutacyjne.Core.pdb
+C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne.Core\bin\Release\net5.0\ZadanieRekrutacyjne.Core.runtimeconfig.json
+C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne.Core\bin\Release\net5.0\ZadanieRekrutacyjne.Core.runtimeconfig.dev.json
+C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne.Core\obj\Release\net5.0\ZadanieRekrutacyjne.Core.genruntimeconfig.cache
