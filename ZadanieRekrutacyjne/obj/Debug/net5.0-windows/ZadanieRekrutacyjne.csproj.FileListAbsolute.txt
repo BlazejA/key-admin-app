@@ -150,3 +150,4 @@ C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekr
 C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne\obj\Debug\net5.0-windows\ref\ZadanieRekrutacyjne.dll
 C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne\obj\Debug\net5.0-windows\ZadanieRekrutacyjne.pdb
 C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne\obj\Debug\net5.0-windows\ZadanieRekrutacyjne.genruntimeconfig.cache
+C:\Users\ablaz\source\repos\ZadanieRekrutacyjne\zadanie-rekrutacyjne\ZadanieRekrutacyjne\obj\Debug\net5.0-windows\ZadanieRekrutacyjne.csproj.CopyComplete
