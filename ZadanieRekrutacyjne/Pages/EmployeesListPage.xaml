@@ -7,7 +7,7 @@
              mc:Ignorable="d"
              d:DesignHeight="450"
              d:DesignWidth="800">
-    
+
     <UserControl.Resources>
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
 
@@ -103,7 +103,9 @@
                          Width="100"
                          VerticalAlignment="Center"
                          Grid.Column="1"
-                         Grid.Row="0" />
+                         Grid.Row="0"
+                         MaxLength="4"
+                         PreviewTextInput="NumberValidationTextBox" />
                 <Label VerticalAlignment="Center"
                        Grid.Column="2"
                        Grid.Row="0">Imię:</Label>
@@ -167,7 +169,9 @@
                          Width="100"
                          VerticalAlignment="Center"
                          Grid.Column="1"
-                         Grid.Row="0" />
+                         Grid.Row="0"
+                         MaxLength="4"
+                         PreviewTextInput="NumberValidationTextBox" />
                 <Label VerticalAlignment="Center"
                        Grid.Column="2"
                        Grid.Row="0">Imię:</Label>
@@ -212,6 +216,6 @@
         </Grid>
 
         <local:EmployeeList />
-        
+
     </StackPanel>
 </UserControl>

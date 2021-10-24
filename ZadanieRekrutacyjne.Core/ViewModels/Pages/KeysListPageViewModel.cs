@@ -47,9 +47,6 @@ namespace ZadanieRekrutacyjne.Core
 
             NewKeyNumber = string.Empty;
             NewRoomName = string.Empty;
-
-            OnPropertyChanged(nameof(NewKeyNumber));
-            OnPropertyChanged(nameof(NewRoomName));
         }
         private void DeleteSelectedKey(object o)
         {
@@ -70,12 +67,10 @@ namespace ZadanieRekrutacyjne.Core
         private void ToogleEditVisibility(object o)
         {
             EditDisplayControl = !EditDisplayControl;
-            OnPropertyChanged(nameof(EditDisplayControl));
         }
         private void ToogleAddVisibility(object o)
         {
             AddDisplayControl = !AddDisplayControl;
-            OnPropertyChanged(nameof(AddDisplayControl));
         }
         private void UpdateKey(string id)
         {
@@ -111,9 +106,6 @@ namespace ZadanieRekrutacyjne.Core
             UpdatedKeyNumber = string.Empty;
             UpdatedRoomName = string.Empty;
 
-            OnPropertyChanged(nameof(UpdatedKeyNumber));
-            OnPropertyChanged(nameof(UpdatedRoomName));
-
             DatabaseLocator.Database.SaveChanges();
         }
         private bool KeyNumberExist(string keyToCheck)
@@ -121,15 +113,13 @@ namespace ZadanieRekrutacyjne.Core
             if (DatabaseLocator.Database.Keys.Any(x => x.KeyNumber == keyToCheck))
             {
                 HasErrorOccured = true;
-                OnPropertyChanged(nameof(HasErrorOccured));
                 return true;
             }
             else
             {
                 HasErrorOccured = false;
-                OnPropertyChanged(nameof(HasErrorOccured));
+                return false;
             }
-            return false;
         }
         private void ReplaceItem(ObservableCollection<KeysViewModel> list, string toChange, KeysViewModel newItem)
         {

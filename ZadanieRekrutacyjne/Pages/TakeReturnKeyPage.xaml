@@ -58,7 +58,9 @@
                         Visibility="{Binding HasManyEmployeesExist, Converter={StaticResource BooleanToVisibilityConverter}}">
                 <Label>Numer pracownika:</Label>
                 <TextBox Text="{Binding TakenEmployeeNumber, Mode=TwoWay}"
-                         Width="100" />
+                         Width="100"
+                         MaxLength="4"
+                         PreviewTextInput="NumberValidationTextBox"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal"
@@ -76,6 +78,12 @@
                        Visibility="{Binding HasErrorOccured, Converter={StaticResource BooleanToVisibilityConverter}}"
                        HorizontalAlignment="Center"
                        Foreground="DarkRed"
+                       FontSize="16"
+                       Margin="0,20,0,0" />
+            <TextBlock Text="{Binding SucceedMessage}"
+                       Visibility="{Binding SucceedOccured, Converter={StaticResource BooleanToVisibilityConverter}}"
+                       HorizontalAlignment="Center"
+                       Foreground="ForestGreen"
                        FontSize="16"
                        Margin="0,20,0,0" />
         </StackPanel>

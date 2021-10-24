@@ -84,7 +84,9 @@
                 <Label VerticalAlignment="Center">Numer klucza:</Label>
                 <TextBox Text="{Binding UpdatedKeyNumber, Mode=TwoWay}"
                          Width="100"
-                         VerticalAlignment="Center" />
+                         VerticalAlignment="Center"
+                         MaxLength="4"
+                         PreviewTextInput="NumberValidationTextBox"/>
                 <Label Margin="20,0,0,0"
                        VerticalAlignment="Center">Nazwa pomieszczenia:</Label>
                 <TextBox Text="{Binding UpdatedRoomName, Mode=TwoWay}"
@@ -102,7 +104,9 @@
                 <Label VerticalAlignment="Center">Numer klucza:</Label>
                 <TextBox Text="{Binding NewKeyNumber, Mode=TwoWay}"
                          Width="100"
-                         VerticalAlignment="Center" />
+                         VerticalAlignment="Center"
+                         MaxLength="4"
+                         PreviewTextInput="NumberValidationTextBox"/>
                 <Label Margin="20,0,0,0"
                        VerticalAlignment="Center">Nazwa pomieszczenia:</Label>
                 <TextBox Text="{Binding NewRoomName, Mode=TwoWay}"
